@@ -6,10 +6,10 @@ local os, math, string = os, math, string
 
 local theme                                     = {}
 theme.dir                                       = os.getenv("HOME") .. "/.config/awesome/themes/darkblue"
-theme.wallpaper                                 = theme.dir .. "/wallpapers/wall_0.png"
-theme.font                                      = "Meslo LGS Regular 10"
-theme.taglist_font                              = "Meslo LGS Bold 10"
-theme.tasklist_font                             = "Terminus 10"
+theme.wallpaper                                 = theme.dir .. "/wallpapers/wall_kapnoc.jpg"
+theme.font                                      = "Hack Regular 10"
+theme.taglist_font                              = "Hack Bold 10"
+theme.tasklist_font                             = "Hack 10"
 
 theme.bg_normal                                 = "#32302f"
 theme.fg_normal                                 = "#a89984"
@@ -50,7 +50,7 @@ theme.titlebar_fg_focus                         = "#282828"
 theme.menu_height                               = 16
 theme.menu_width                                = 140
 
-theme.notification_font                         = "Meslo LGS Regular 12"
+theme.notification_font                         = "Hack Regular 12"
 theme.notification_bg                           = theme.bg_normal
 theme.notification_fg                           = theme.fg_normal
 theme.notification_border_width                 = 0
@@ -477,8 +477,9 @@ function theme.connect(s)
     
     -- Tags
     --awful.tag(awful.util.tagnames, s, awful.layout.layouts[1])
-    layout = { awful.layout.layouts[1], awful.layout.layouts[1], awful.layout.layouts[1], awful.layout.layouts[3], awful.layout.layouts[3], awful.layout.layouts[5]}
-    awful.tag({ " </> ", " >_ ", " web ", " & ", " etc ", " # " }, s, layout)
+    --layout = { awful.layout.layouts[1], awful.layout.layouts[1], awful.layout.layouts[1], awful.layout.layouts[3], awful.layout.layouts[3], awful.layout.layouts[5]}
+    layout = { awful.layout.layouts[1] }
+    awful.tag({ " 1 ", " 2 ", " 3 ", " 4 ", " 5 ", " 6 ", " 7 ", " 8 ", " 9 " }, s, layout)
 
     -- Create a promptbox for each screen
     s.mypromptbox = awful.widget.prompt()
@@ -506,12 +507,12 @@ function theme.connect(s)
             layout = wibox.layout.fixed.horizontal,
             s.mytaglist,
             s.mypromptbox,
-            chrome_button,
-            idea_button,
-            pycharm_button,
-            webstorm_button,
-            teamviewer_button,
-            vivaldi_button,
+            --chrome_button,
+            --idea_button,
+            --pycharm_button,
+            --webstorm_button,
+            --teamviewer_button,
+            --vivaldi_button,
         },
         --s.mytasklist, -- Middle widget
         nil,
